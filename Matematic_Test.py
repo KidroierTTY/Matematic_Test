@@ -48,10 +48,13 @@ def math_quiz(number_of_questions=5):
     print("Тест завершен.")
     print(f"Вы правильно решили {correct_answers} из {number_of_questions} вопросов.")
 
-    if  correct_answers > 8:
-        print("Отлично! Вы получаете оценку A.")
-    elif correct_answers > 5:
-        print("Хорошо! Вы получаете оценку B.")
+    # процент от числа = (правельные ответы / всего вопросов) * 100
+    prothent = (correct_answers/number_of_questions) * 100
+
+    if prothent > 80:
+        print("Отлично! Вы получаете оценку A.") # > 80%
+    elif prothent > 60:
+        print("Хорошо! Вы получаете оценку B.") # > 60%
     else:
         print("Попробуйте еще раз. Вы получаете оценку C.")
 
